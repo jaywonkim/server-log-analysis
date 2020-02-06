@@ -46,32 +46,32 @@ RNN-LSTM was used for this.
 ## 1.0 General Analysis:
 ### 1.1 Percentage Of Reply Codes
 This shows the percentage of successful, failed and redirect requests made to the server.
-![alt text](https://github.com/scarecrow21/server-log-analysis/blob/master/graphs/pie.png)
+![alt text](https://github.com/theairbend3r/server-log-analysis/blob/master/graphs/pie.png)
 
 ### 1.2 Size Of Contents Returned By The Server Across The Day
 This plot shows the size of data response by the server(data requested by the user) across a sample of
-the data set.![alt text](https://github.com/scarecrow21/server-log-analysis/blob/master/graphs/line.png)
+the data set.![alt text](https://github.com/theairbend3r/server-log-analysis/blob/master/graphs/line.png)
 
 ### 1.3 Frequency At which A particular User Accessed The Sent A Request
 Anomalous users can be detected using this. Anomaly lies far away from the majority data.
-![alt text](https://github.com/scarecrow21/server-log-analysis/blob/master/graphs/bar_users.png)
+![alt text](https://github.com/theairbend3r/server-log-analysis/blob/master/graphs/bar_users.png)
 
 ### 1.4 Frequency At Which Each Target URL Was Accessed
 Each URL was cat-coded into integers and then plotted.
-![alt text](https://github.com/scarecrow21/server-log-analysis/blob/master/graphs/url-bar.png)
+![alt text](https://github.com/theairbend3r/server-log-analysis/blob/master/graphs/url-bar.png)
 
 
 ## 2.0 Intruder Detection:
 ### 2.1 Decision Trees:
-![alt text](https://github.com/scarecrow21/server-log-analysis/blob/master/graphs/decision-trees.png)
+![alt text](https://github.com/theairbend3r/server-log-analysis/blob/master/graphs/decision-trees.png)
 
 
 ### 2.2 Logistic Regression:
-![alt text](https://github.com/scarecrow21/server-log-analysis/blob/master/graphs/logistic-regression.png)
+![alt text](https://github.com/theairbend3r/server-log-analysis/blob/master/graphs/logistic-regression.png)
 
 
 ### 2.3 Artificial Neural Network:
-![alt text](https://github.com/scarecrow21/server-log-analysis/blob/master/graphs/ann.png)
+![alt text](https://github.com/theairbend3r/server-log-analysis/blob/master/graphs/ann.png)
 
 
 
@@ -85,13 +85,13 @@ Univariate forecasting has been done. Multivariate forecasting is still incomple
 From the cleaned server logs, two columns- Timestamp and Reply size are extracted. The data is
 divided into training set and test set.
 
-![alt text](https://github.com/scarecrow21/server-log-analysis/blob/master/graphs/uni-forecasting-data.png)
+![alt text](https://github.com/theairbend3r/server-log-analysis/blob/master/graphs/uni-forecasting-data.png)
 
 The accuracy of the rnn model depends on the amount of data as well as on the hyper parameters
 such as ​ batch-size ​ , ​ number of epochs ​ , and ​ number of neurons ​ . To identify the optimum parameters to
 train the model, a few experiments were run and results plotted.
 
-![alt text](https://github.com/scarecrow21/server-log-analysis/blob/master/graphs/actual-series.png)
+![alt text](https://github.com/theairbend3r/server-log-analysis/blob/master/graphs/actual-series.png)
 
 _A line plot of a part of the data. This figure shows the sum of all values of REPLY_SIZE on a single day
 from 12-Dec-2015 to 9-Jan-2016. This is the total data that the server has responded upon request._
@@ -121,8 +121,8 @@ and error score.
 #### Number of Epochs
 The batch size was set to 4 and different number of epochs were tried to find the one that gives the
 best results.
-![alt text](https://github.com/scarecrow21/server-log-analysis/blob/master/graphs/epoch(batch4)screenshot.png)
-![alt text](https://github.com/scarecrow21/server-log-analysis/blob/master/graphs/epoch(batch4).png)
+![alt text](https://github.com/theairbend3r/server-log-analysis/blob/master/graphs/epoch(batch4)screenshot.png)
+![alt text](https://github.com/theairbend3r/server-log-analysis/blob/master/graphs/epoch(batch4).png)
 
 * The mean gives an idea of the average expected performance of a configuration, whereas the standard
 deviation gives an idea of the variance.
@@ -134,8 +134,8 @@ better.
 
 #### Batch Size
 Batch sizes 1, 2 and 4 were tried and results are as shown below.
-![alt text](https://github.com/scarecrow21/server-log-analysis/blob/master/graphs/batchsizecomparescreenshot.png)
-![alt text](https://github.com/scarecrow21/server-log-analysis/blob/master/graphs/batchsizecomparisionboxplot.png)
+![alt text](https://github.com/theairbend3r/server-log-analysis/blob/master/graphs/batchsizecomparescreenshot.png)
+![alt text](https://github.com/theairbend3r/server-log-analysis/blob/master/graphs/batchsizecomparisionboxplot.png)
 
 * The plot shows the median performance as a green line where a batch size of 4 shows both the largest
 variability and also the lowest median RMSE.
@@ -146,9 +146,9 @@ variability and also the lowest median RMSE.
 The number of neurons affects the learning capacity of the network. More neurons would help better the accuracy at the cost of
 training time.
 Batch size of 4 and 1000 training epochs will be used.  
-![alt text](https://github.com/scarecrow21/server-log-analysis/blob/master/graphs/numberofneuronscreenshotpart1.png)
-![alt text](https://github.com/scarecrow21/server-log-analysis/blob/master/graphs/numberofneuronscreenshotpart2.png)
-![alt text](https://github.com/scarecrow21/server-log-analysis/blob/master/graphs/neurons.png)
+![alt text](https://github.com/theairbend3r/server-log-analysis/blob/master/graphs/numberofneuronscreenshotpart1.png)
+![alt text](https://github.com/theairbend3r/server-log-analysis/blob/master/graphs/numberofneuronscreenshotpart2.png)
+![alt text](https://github.com/theairbend3r/server-log-analysis/blob/master/graphs/neurons.png)
   
 
 From the mean performance alone, the results suggest a network configuration with 1 neuron as having
@@ -160,6 +160,6 @@ The size of the dataset was 3,84,966. After the model has been trained, it was t
 The forecast was made on 12 new dates as shown below. In the line-plot, blue colour shows the actual
 values and the orange colour shows the predicted values.
 
-![alt text](https://github.com/scarecrow21/server-log-analysis/blob/master/graphs/actual_univariate_rnn%20graph.png)
+![alt text](https://github.com/theairbend3r/server-log-analysis/blob/master/graphs/actual_univariate_rnn%20graph.png)
 
 
